@@ -106,6 +106,9 @@ void Axe(CBlob@ this, f32 damage, u8 type) //axe for mass wood destruction/harve
 				if (b.hasTag("stone")) { // can't break stone doors
 					break;
 				}
+				if (b.hasTag("gold")) {
+					break;
+				}
 				if (builder_has_hit_actor(this, b))
 				{
 					continue;

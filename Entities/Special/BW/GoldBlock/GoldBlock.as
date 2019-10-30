@@ -16,6 +16,8 @@ void onInit(CBlob@ this)
 	this.Tag("blocks sword");
 	this.Tag("blocks water");
 
+	this.Tag("gold");
+
 	if (getNet().isServer())
 	{
         string propname = GOLD_PILE_COUNT_PREFIX + this.getTeamNum();

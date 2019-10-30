@@ -17,6 +17,8 @@ void onInit(CBlob@ this)
 	this.Tag("blocks sword");
 	this.Tag("blocks water");
 
+	this.Tag("gold");
+
 	if (getNet().isServer())
 	{
         CMap@ map = getMap();
@@ -103,12 +105,6 @@ f32 onHit(CBlob@ this, Vec2f worldPoint, Vec2f velocity, f32 damage, CBlob@ hitt
 	//print("custom data: "+customData+" builder: "+Hitters::builder);
 	if (customData == Hitters::builder)
 		damage *= 0.5f;
-	if (customData == Hitters::builderaxe)
-	{
-		harvest.set('mat_gold', 0);
-		this.set('harvest', harvest);
-		damage *= 0.0f;
-	}
 	if (customData == Hitters::saw)                //Hitters::saw is the drill hitter.... why
 		damage *= 2;
 	if (customData == Hitters::bomb)
